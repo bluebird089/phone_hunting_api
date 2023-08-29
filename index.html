@@ -11,10 +11,17 @@
 
 <body>
     <header>
-        
+        <h3 class="text-4xl text-center">Hunting Phone API</h3>
     </header>
     <main>
-
+        <section class="container mx-auto flex justify-center my-5">
+            <input id="input-field" type="text" placeholder="Type here" class="input w-3/4 border border-gray-200" />
+            <button onclick="handleSearch()" class="btn bg-slate-600 text-white ml-3 hover:bg-slate-500">Search</button>
+        </section>
+        <section class="container mx-auto">
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            </div>
+        </section>
     </main>
     <footer>
 
