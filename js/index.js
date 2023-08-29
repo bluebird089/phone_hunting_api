@@ -8,28 +8,45 @@ const loadPhone = async (searchText) => {
 const displayPhones = phones => {
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.innerHTML = ``;
+    const showAllButton = document.getElementById('show-all-button');
+    if(phones.length > 12){
+        showAllButton.classList.remove('hidden');
+    }
+    else{
+        showAllButton.classList.add('hidden');
+    }
     phones = phones.slice(0, 12);
     phones.forEach(phone => {
         const phoneCard = document.createElement('div');
-        phoneCard.classList.add = 'card card-compact bg-base-100 shadow-xl p-6';
+        phoneCard.classList = `card card-compact bg-base-100 border border-gray-200 p-6`;
         phoneCard.innerHTML = `
-        <figure class="flex justify-center p-5"><img src=${phone.image} alt="Phone" /></figure>
+        <figure class="flex justify-center my-5"><img src=${phone.image} alt="Phone" /></figure>
         <div class="text-center">
             <h2 class="text-2xl font-semibold">${phone.phone_name}</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+            <div class="card-actions justify-center">
+                <button class="btn bg-slate-600 text-white ml-3 hover:bg-slate-500 mt-5">Buy Now</button>
             </div>
         </div>
         `
         phoneContainer.appendChild(phoneCard);
-    })
+    });
+    toggleLoading(false);
 }
 
 const handleSearch = () =>{
     const inputField = document.getElementById('input-field');
     const searchText = inputField.value;
     loadPhone(searchText);
+    toggleLoading(true);
 }
 
-loadPhone();
+const toggleLoading = (isLoading) =>{
+    const loadingScreen = document.getElementById('loading');
+    if(isLoading){
+        loadingScreen.classList.remove('hidden');
+    }
+    else{
+        loadingScreen.classList.add('hidden');
+    }
+}
