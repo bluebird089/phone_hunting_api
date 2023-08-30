@@ -22,8 +22,7 @@ const displayPhones = phones => {
         phoneCard.innerHTML = `
         <figure class="flex justify-center my-5"><img src=${phone.image} alt="Phone" /></figure>
         <div class="text-center">
-            <h2 class="text-2xl font-semibold">${phone.phone_name}</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 class="text-lg md:text-2xl font-semibold">${phone.phone_name}</h2>
             <div class="card-actions justify-center">
                 <button class="btn bg-slate-600 text-white ml-3 hover:bg-slate-500 mt-5">Buy Now</button>
             </div>

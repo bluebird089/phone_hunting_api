@@ -11,19 +11,19 @@
 
 <body>
     <header>
-        <h3 class="text-4xl text-center">Hunting Phone API</h3>
+        <h3 class="text-2xlgit md:text-4xl text-center">Hunting Phone API</h3>
     </header>
     <main>
-        <section class="container mx-auto flex justify-center my-5">
+        <section class="container mx-auto flex justify-center my-5 px-5 lg:px-0">
             <input id="input-field" type="text" placeholder="Type here" class="input w-3/4 border border-gray-200" />
             <button onclick="handleSearch()" class="btn bg-slate-600 text-white ml-3 hover:bg-slate-500">Search</button>
         </section>
 
-        <section class="container mx-auto">
+        <section class="container mx-auto px-5 lg:px-0">
             <div id="loading" class="text-center hidden">
                 <span class="loading loading-dots loading-lg"></span>
             </div>
-            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div id="phone-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             </div>
             <div id="show-all-button" class="hidden text-center my-5">
                 <button class="btn bg-slate-600 text-white ml-3 hover:bg-slate-500">Show All</button>
