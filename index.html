@@ -26,9 +26,22 @@
             <div id="phone-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             </div>
             <div id="show-all-button" class="hidden text-center my-5">
-                <button onclick="handleShowAll()" class="btn bg-slate-600 text-white ml-3 hover:bg-slate-500">Show All</button>
+                <button onclick="handleShowAll()" class="btn bg-slate-600 text-white ml-3 hover:bg-slate-500">Show
+                    All</button>
             </div>
         </section>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <div id="show-details-container" class="space-y-1">
+                </div>
+                <div class="modal-action flex justify-center">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn bg-slate-600 text-white ml-3 hover:bg-slate-500">Close</button>
+                </div>
+            </form>
+        </dialog>
     </main>
     <footer>
 
